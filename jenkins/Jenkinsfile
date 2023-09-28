@@ -28,9 +28,9 @@ pipeline {
                     
                     if (!folder.exists()) {
                         folder.mkdirs()
-                        echo "Folder '${folderName}' created successfully."
+                        echo "Folder '${folderName}' XXXXXXXX created successfully."
                     } else {
-                        echo "Folder '${folderName}' already exists."
+                        echo "Folder '${folderName}' XXXXXXXXX already exists."
                     }
                 }
             }
