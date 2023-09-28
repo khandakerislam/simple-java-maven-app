@@ -22,8 +22,8 @@ pipeline {
         stage('Create Folder') {
             steps {
                 script {
-                    def folderPath = '/'  // Specify the folder path
-                    def folderName = 'target/my-app'             // Specify the folder name
+                    def folderPath = '/target/'  // Specify the folder path
+                    def folderName = 'my-app'             // Specify the folder name
                     def folder = new File(folderPath, folderName)
                     
                     if (!folder.exists()) {
