@@ -17,25 +17,6 @@ pipeline {
                 }
             }
         }
-
-
-        stage('Create Folder') {
-            steps {
-                script {
-                    def folderPath = '/target/'  // Specify the folder path
-                    def folderName = 'my-app'             // Specify the folder name
-                    def folder = new File(folderPath, folderName)
-                    
-                    if (!folder.exists()) {
-                        folder.mkdirs()
-                        echo "Folder '${folderName}' XXXXXXXX created successfully."
-                    } else {
-                        echo "Folder '${folderName}' XXXXXXXXX already exists."
-                    }
-                }
-            }
-        }
-        
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
