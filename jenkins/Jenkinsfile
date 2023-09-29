@@ -53,5 +53,10 @@ pipeline {
                 echo 'Testing two minutes'
             }
         }
+        stage('Test two minutes'){
+            steps{
+                echo 'Added multibranch'
+            }
+        }
     }
 }
