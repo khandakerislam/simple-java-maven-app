@@ -48,5 +48,10 @@ pipeline {
                 }
             }
         }
+        stage('Test two minutes'){
+            steps{
+                echo 'Testing two minutes'
+            }
+        }
     }
 }
